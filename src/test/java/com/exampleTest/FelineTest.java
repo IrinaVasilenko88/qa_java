@@ -1,4 +1,4 @@
-package com.example;
+package com.exampleTest;
 
 import com.example.Feline;
 import org.junit.Test;
@@ -17,14 +17,13 @@ public class FelineTest {
     @Test
     public void getKittensTest() {
         Feline feline = new Feline();
-        assertEquals(1, feline.getKittens());
-
+        int expected = 1;
+        assertEquals(expected, feline.getKittens());
     }
 
     @Test
     public void countKittensTest() {
         Feline feline = new Feline();
         assertEquals(3, feline.getKittens(3));
-
     }
 }

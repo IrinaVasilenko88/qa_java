@@ -1,4 +1,4 @@
-package com.example;
+package com.exampleTest;
 
 import com.example.Feline;
 import com.example.Lion;
@@ -33,7 +33,6 @@ public class LionTest {
         assertTrue(lion.doesHaveMane());
     }
 
-
     @Test(expected = AssertionError.class)
     public void errorMessageTest() {
         try {
@@ -49,11 +48,12 @@ public class LionTest {
         Lion lion = new Lion("Самец", feline);
         assertEquals(0, lion.getKittens());
     }
+
     @Test
     public void lionGetFoodTest() throws Exception {
         Lion lion = new Lion("Самец", feline);
         Mockito.when(feline.getFood("Хищник")).thenReturn(Arrays.asList("Животные", "Птицы", "Рыба"));
-        List<String>expectedMeat = Arrays.asList("Животные", "Птицы", "Рыба");
+        List<String> expectedMeat = Arrays.asList("Животные", "Птицы", "Рыба");
         assertEquals(expectedMeat, feline.getFood("Хищник"));
     }
 }

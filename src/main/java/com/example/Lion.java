@@ -3,8 +3,9 @@ package com.example;
 import java.util.List;
 
 public class Lion {
+
     private final Feline feline;
-    boolean hasMane;
+    private final boolean hasMane;
 
     public Lion(String sex, Feline feline) throws Exception {
         this.feline = feline;
@@ -16,8 +17,6 @@ public class Lion {
             throw new Exception("Используйте допустимые значения пола животного - самец или самка");
         }
     }
-
-
 
     public int getKittens() {
         return feline.getKittens();
